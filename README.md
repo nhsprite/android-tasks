@@ -3,7 +3,9 @@ android-task1_1
 
 ## 这次的任务主题就叫做：便签
 实现一个完美的便签还是很有难度的，能做到像Tuudo，AnyDo， Clear这样的就可以开始收获money啦（嗯，太功利啦，哈哈）
+
 作为实习任务来说，要求就不会太高了，因此所需要完成的内容还比较简单，可以参看一下原型：http://teamshare.bingyan.net/huyang/task/
+
 也可以完全按照自己的思路来做，完成度越高越好。
 
 ### android方面主要可能的技术
