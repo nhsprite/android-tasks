@@ -1,0 +1,9 @@
+package com.example.noteservice;
+
+public class noteservice {
+	public void addNote(String string){
+		
+	}
+	
+	public void deleteNote()
+}

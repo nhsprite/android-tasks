@@ -1,0 +1,36 @@
+package com.example.noteservice;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+
+import com.example.mydbhelper.MyDBhelper;
+
+public class noteservice {
+	private MyDBhelper mydbhelper;
+	public noteservice(Context context) {
+		this.mydbhelper =new MyDBhelper(context);
+	}
+
+	public void addNote(String string){
+		SQLiteDatabase db = mydbhelper.getWritableDatabase();
+		SimpleDateFormat formatter = new SimpleDateFormat ("yyyyƒÍMM‘¬dd»’ HH:mm:ss ");
+		Date curDate = new Date(System.currentTimeMillis());
+		String time = formatter.format(curDate);
+		db.execSQL("insert into notes(time, content) values(?, ?)",new Object[]{time, string});
+		db.close();
+	}
+	
+	public void deleteNote(int id){
+		SQLiteDatabase db = mydbhelper.getWritableDatabase();
+		db.execSQL("delete from notes where id = ?",new Object[]{id});
+		db.close();
+	}
+	
+	public void getnote(){
+		SQLiteDatabase db = mydbhelper.getReadableDatabase();
+		Cursor cursor = db.rawQuery("select * from notes", null);
+	}
+}

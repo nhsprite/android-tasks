@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.mynote.MainActivity" >
+
+
+    <item
+        android:id="@+id/menu_add"
+        android:textSize="40dp"
+        android:title="@string/newNote"
+        app:showAsAction="always"/>
+    
+        <item
+        android:id="@+id/exit"
+        android:textSize="40dp"
+        android:title="@string/exit"
+        app:showAsAction="never"/>
+</menu>

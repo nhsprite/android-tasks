@@ -1,0 +1,23 @@
+package com.example.noteservice;
+
+import com.example.mydbhelper.MyDBhelper;
+
+public class noteservice {
+	private MyDBhelper mydbhelper;
+	public noteservice(Context context) {
+		super();
+		this.mydbhelper = mydbhelper;
+	}
+
+	public void addNote(String string){
+		
+	}
+	
+	public void deleteNote(int id){
+		
+	}
+	
+	public void modifyNote(int id){
+		
+	}
+}

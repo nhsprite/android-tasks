@@ -1,0 +1,26 @@
+package com.example.noteservice;
+
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+
+import com.example.mydbhelper.MyDBhelper;
+
+public class noteservice {
+	private MyDBhelper mydbhelper;
+	public noteservice(Context context) {
+		this.mydbhelper =new MyDBhelper(context);
+	}
+
+	public void addNote(String string){
+		SQLiteDatabase db = mydbhelper.getWritableDatabase();
+		db.execSQL("insert into notes")
+	}
+	
+	public void deleteNote(int id){
+		
+	}
+	
+	public void modifyNote(int id){
+		
+	}
+}
